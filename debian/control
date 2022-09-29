@@ -1,0 +1,37 @@
+Source: golang-github-jmespath-go-jmespath
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Uploaders: Dmitry Smirnov <onlyjob@debian.org>,
+           Tim Potter <tpot@hpe.com>,
+           Martina Ferrari <tincho@debian.org>,
+           Jongmin Kim <jmkim@pukyong.ac.kr>,
+           Anthony Fok <foka@debian.org>
+Section: golang
+Testsuite: autopkgtest-pkg-go
+Priority: optional
+Build-Depends: debhelper-compat (= 13),
+               dh-golang,
+               golang-any,
+               golang-github-davecgh-go-spew-dev,
+               golang-github-pmezard-go-difflib-dev,
+               golang-github-stretchr-objx-dev,
+               golang-gopkg-yaml.v2-dev (>= 2.2.8)
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/go-team/packages/golang-github-jmespath-go-jmespath
+Vcs-Git: https://salsa.debian.org/go-team/packages/golang-github-jmespath-go-jmespath.git
+Homepage: https://github.com/jmespath/go-jmespath
+Rules-Requires-Root: no
+XS-Go-Import-Path: github.com/jmespath/go-jmespath
+
+Package: golang-github-jmespath-go-jmespath-dev
+Architecture: all
+Multi-Arch: foreign
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         golang-github-davecgh-go-spew-dev,
+         golang-github-pmezard-go-difflib-dev,
+         golang-github-stretchr-objx-dev,
+         golang-gopkg-yaml.v2-dev (>= 2.2.8)
+Description: Golang implementation of JMESPath
+ A JMESPath implementation in Go.
+ .
+ See http://jmespath.org for more info.
